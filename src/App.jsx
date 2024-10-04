@@ -5,9 +5,14 @@ import PlayerWelcomeScene from "./components/PlayerWelcomeScene";
 import ReportPage from "./components/ReportPage";
 import WatchVideoPage from "./components/WatchVideo";
 import NextMissionPage from "./components/NextMissionPage";
-
+// import QuizPage from "./components/QuizPage";
+// import AnsPage from "./components/AnsPage";
+// import { QuizProvider } from "./context/QuizContext";
+import ResultPage from "./components/ResultPage";
+import QuizPage from "./components/QuizPage";
 export default function App() {
   return (
+    
     <Router>
       <Routes>
       <Route path="/" element={<GameStart />} />
@@ -16,7 +21,12 @@ export default function App() {
       <Route path="/report" element={<ReportPage />} />
       <Route path="watch-video" element={<WatchVideoPage/>}/>
       <Route path="next-mission" element={<NextMissionPage/>}/>
+      <Route path="/quiz" element={<QuizPage />} />
+      <Route path="/result" element={<ResultPage />} />
+      {/* <Route path="quiz" element={<QuizPage/>}/> */}
+      {/* <Route path="answare" element={<AnsPage/>}/> */}
     </Routes>
     </Router>
+    
   )
 }

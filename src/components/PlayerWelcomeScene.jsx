@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Card from './Card'; // Import the Card component
 
+import avatar from '../assets/Planetopia Final Prototype (19).png'
 const PlayerWelcomeScene = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -25,7 +26,13 @@ const PlayerWelcomeScene = () => {
 
   return (
     <div className="bg-space-lab min-h-screen flex flex-col justify-center items-center">
-      {/* Use the Card component for displaying messages */}
+              <div className="absolute bottom-0 right-0 z-50 p-2 h-screen ">
+        <img
+          src={avatar}
+          alt="Player Avatar"
+         
+        />
+</div>
       {missionStarted === 0 && (
         <Card
           title={`Welcome, ${playerName}!`}

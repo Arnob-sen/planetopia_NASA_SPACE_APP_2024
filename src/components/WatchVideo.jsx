@@ -2,7 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Card from './Card'; // Import the Card component
-
+import avatar from '../assets/astropencil.png'
 const WatchVideoPage = () => {
   const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ const WatchVideoPage = () => {
 
   return (
     <div className="bg-space-lab2 min-h-screen flex flex-col justify-center items-center text-white">
-      {/* Use the Card component for displaying the video and continue button */}
+      
       <Card
         title="Watch the Video"
         description={
