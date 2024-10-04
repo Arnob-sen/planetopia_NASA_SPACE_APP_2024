@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Card from "./Card";
 const WelcomeScene = () => {
   const [name, setName] = useState("");
-  const [gender, setGender] = useState("");
+  
 
   const navigate= useNavigate();
 
@@ -16,45 +17,17 @@ const WelcomeScene = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col justify-center items-center">
-      <div className="text-white text-3xl mb-6">Welcome to TerraXplore! We're excited to have you on the team. What’s your name, space explorer?</div>
-      <div className="flex flex-col space-y-4">
-        <input
-          type="text"
-          placeholder="Enter your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="p-2 rounded bg-gray-800 text-white border border-gray-700"
-        />
-        <div className="flex justify-around">
-          <label className="text-white">
-            <input
-              type="radio"
-              name="gender"
-              value="Male"
-              onChange={(e) => setGender(e.target.value)}
-              className="mr-2"
-            />
-            Male
-          </label>
-          <label className="text-white">
-            <input
-              type="radio"
-              name="gender"
-              value="Female"
-              onChange={(e) => setGender(e.target.value)}
-              className="mr-2"
-            />
-            Female
-          </label>
-        </div>
-        <button
-          onClick={handleSubmit}
-          className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-        >
-          Submit
-        </button>
-      </div>
+
+    <div className="bg-space-lab min-h-screen flex flex-col justify-center items-center">
+      <Card
+        title="Welcome to TerraXplore!"
+        description="Please enter your name to get started."
+        buttonLabel="Proceed to Mission"
+        onButtonClick={handleSubmit}
+        inputField={true}
+        inputValue={name}
+        onInputChange={(e) => setName(e.target.value)}
+      />
     </div>
   );
 };

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-space-lab {
+  background-image: url('./assets/DALL·E 2024-10-02 23.50.35 - A futuristic space research lab with a minimalist design, featuring a large 3D hologram of a newly discovered exoplanet as the central focus. The room (1).webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-space-lab2 {
+  background-image: url('./assets/Planetopia Final Prototype.png');
+  background-size: cover;
+  background-position: center;
+}

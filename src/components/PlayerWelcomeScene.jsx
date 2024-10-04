@@ -1,7 +1,9 @@
 
+
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import Card from './Card'; // Import the Card component
+
 const PlayerWelcomeScene = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -13,44 +15,43 @@ const PlayerWelcomeScene = () => {
   const handleProceed = () => {
     // When the button is clicked, show the next message
     if (missionStarted < 2) {
-        // Increment the phase to move to the next message
-        setMissionStarted(missionStarted + 1);
-      } else {
-        // Navigate to the ReportPage
-        navigate("/report", { state: { playerName } });
-      }
+      // Increment the phase to move to the next message
+      setMissionStarted(missionStarted + 1);
+    } else {
+      // Navigate to the ReportPage
+      navigate("/report", { state: { playerName } });
+    }
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col justify-center items-center">
-        {missionStarted==0&& (
-      <><h1 className="text-white text-4xl mb-8">Welcome, {playerName}!</h1><p className="text-white text-2xl mb-4">
-                  We’re excited to have you onboard with Team TerraXplore!
-              </p><p className="text-white text-xl mb-6">
-                      Together, we'll explore new worlds and solve Earth's problems.
-                  </p></>
-)}
-      {/* New message appears after clicking the button */}
-      {missionStarted==1 && (
-        <p className="text-white text-2xl mt-6">
-          Great news, {playerName}! The Kepler Space Telescope has just discovered something amazing!
-        </p>
-      )}
-      {missionStarted === 2 && (
-        <>
-          <p className="text-white text-2xl mt-6">
-            The team is analyzing the discovery. Prepare yourself to review the first set of data.
-          </p>
-        </>
+    <div className="bg-space-lab min-h-screen flex flex-col justify-center items-center">
+      {/* Use the Card component for displaying messages */}
+      {missionStarted === 0 && (
+        <Card
+          title={`Welcome, ${playerName}!`}
+          description="We’re excited to have you onboard with Team TerraXplore! Together, we'll explore new worlds and solve Earth's problems."
+          buttonLabel="Proceed with Mission"
+          onButtonClick={handleProceed}
+        />
       )}
 
-      {/* Proceed button remains the same */}
-      <button
-        onClick={handleProceed}
-        className="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 text-xl mt-8"
-      >
-        {missionStarted < 2 ? "Proceed with Mission" : "Watch Report"}
-      </button>
+      {missionStarted === 1 && (
+        <Card
+          title={`Great news, ${playerName}!`}
+          description="The Kepler Space Telescope has just discovered something amazing!"
+          buttonLabel="Proceed with Mission"
+          onButtonClick={handleProceed}
+        />
+      )}
+
+      {missionStarted === 2 && (
+        <Card
+          title="Mission Update"
+          description="The team is analyzing the discovery. Prepare yourself to review the first set of data."
+          buttonLabel="Watch Report"
+          onButtonClick={handleProceed}
+        />
+      )}
     </div>
   );
 };
