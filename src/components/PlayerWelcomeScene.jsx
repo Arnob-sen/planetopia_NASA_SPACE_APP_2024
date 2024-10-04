@@ -1,9 +1,10 @@
 
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const PlayerWelcomeScene = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { playerName } = location.state || { playerName: "Explorer" }; // Default to "Explorer" if no name provided
 
   // State to control when the next message appears
@@ -11,7 +12,13 @@ const PlayerWelcomeScene = () => {
 
   const handleProceed = () => {
     // When the button is clicked, show the next message
-    setMissionStarted(missionStarted+1);
+    if (missionStarted < 2) {
+        // Increment the phase to move to the next message
+        setMissionStarted(missionStarted + 1);
+      } else {
+        // Navigate to the ReportPage
+        navigate("/report", { state: { playerName } });
+      }
   };
 
   return (
