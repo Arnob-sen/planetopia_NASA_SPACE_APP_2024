@@ -88,7 +88,5 @@ To run **Planetopia**, follow these steps:
 - Develop multiplayer features to allow players to collaborate on missions.
 - Expand scientific content to include other environmental issues, like deforestation and ocean pollution.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
