@@ -29,7 +29,7 @@ const Card = ({ title, description, buttonLabel, onButtonClick,secondaryButtonLa
           {buttonLabel}
         </button>
       )}
-      <div>
+      <div className='m-4'>
       {secondaryButtonLabel && (
           <button
             onClick={onSecondaryButtonClick}
