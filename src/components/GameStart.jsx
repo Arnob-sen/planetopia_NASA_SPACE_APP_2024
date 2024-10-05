@@ -1,8 +1,8 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import videoBg from "../assets/210886_small.mp4";  // Import the video
+import videoBg from "../assets/210886_small.mp4"; // Import the video
 import Card from "./Card";
+import Button from "./Button";
 const GameStart = () => {
   const navigate = useNavigate();
 
@@ -11,33 +11,33 @@ const GameStart = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center">
-     {/* <Card 
-      title="Plenatopia!"
-      buttonLabel="Start"
-      onButtonClick={handleStart}
-
-      /> */}
+    <div className="relative h-screen w-screen bg-black overflow-hidden">
+      {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        className="absolute top-0 left-0 w-full h-full object-cover"
         src={videoBg}
         autoPlay
         loop
         muted
       />
-     <h1 className="text-white text-4xl mb-8 z-10">Planetopia</h1>
-      
-      {/* Start Button */}
-      <button
-        onClick={handleStart}
-        className="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 text-2xl z-10"
-      >
-        Start Game
-      </button>
+
+      {/* Overlay content */}
+      <div className="relative z-10 h-full w-full flex flex-col justify-between items-center text-center">
+        {/* Title */}
+        <h1 className="text-6xl font-bold text-white mt-12 tracking-widest">
+          PLANETOPIA
+        </h1>
+
+        {/* Start Button */}
+       <Button onClick={handleStart} />
+        
+        
+      </div>
 
       
 
-     
+      {/* Background overlay (optional) */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
     </div>
   );
 };
