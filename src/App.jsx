@@ -13,6 +13,7 @@ import QuizPage from "./components/QuizPage";
 import NextStepsPage from "./components/NextSteps";
 import Second_Quiz from "./components/Second_Quiz";
 import Second_Result from "./components/Second_result";
+import AnotherChapter from "./components/2nd_chapter_Of_learnig";
 export default function App() {
   return (
     
@@ -29,6 +30,7 @@ export default function App() {
       <Route path="/next-steps" element={<NextStepsPage />} />
       <Route path="second-quiz" element={<Second_Quiz/>}/>
       <Route path="second-result" element={<Second_Result/>}/>
+      <Route path="/next-chapter" element={<AnotherChapter/>}/>
       {/* <Route path="quiz" element={<QuizPage/>}/> */}
       {/* <Route path="answare" element={<AnsPage/>}/> */}
     </Routes>

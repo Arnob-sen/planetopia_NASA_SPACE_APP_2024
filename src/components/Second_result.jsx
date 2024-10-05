@@ -10,7 +10,7 @@ const Second_Result = () => {
 
   const handleContinue = () => {
     
-    navigate('/next-steps');
+    navigate('/next-chapter');
   };
 
   return (
