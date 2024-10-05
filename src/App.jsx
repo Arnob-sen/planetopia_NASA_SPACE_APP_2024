@@ -15,7 +15,7 @@ import Second_Quiz from "./components/Second_Quiz";
 import Second_Result from "./components/Second_result";
 import AnotherWatchVideo from "./components/2nd_chapter_watchVideo";
 import AnotherChapter from "./components/2nd_chapter_Of_learnig";
-import MapPage from "./components/Mappage";
+import MapPage from "./components/MapPage";
 import CharacterCard from "./components/CharacterCard";
 import CardPage from "./components/Cardpage";
 export default function App() {
