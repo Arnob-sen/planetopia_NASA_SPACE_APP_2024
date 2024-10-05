@@ -18,6 +18,7 @@ import AnotherChapter from "./components/2nd_chapter_Of_learnig";
 import MapPage from "./components/MapPage";
 import CharacterCard from "./components/CharacterCard";
 import CardPage from "./components/Cardpage";
+import Procced_To_next_quiz from "./components/Procced_to_next_quiz";
 export default function App() {
   return (
     
@@ -39,6 +40,7 @@ export default function App() {
       <Route path="second-result" element={<Second_Result/>}/>
       <Route path="/next-chapter" element={<AnotherChapter/>}/>
       <Route path="/another-watch-video" element={<AnotherWatchVideo/>}/>
+      <Route path="procced-to-next-quiz" element={<Procced_To_next_quiz/>}/>
       {/* <Route path="quiz" element={<QuizPage/>}/> */}
       {/* <Route path="answare" element={<AnsPage/>}/> */}
     </Routes>

@@ -8,7 +8,7 @@ const AnotherWatchVideo = () => {
 
   const handleContinue = () => {
     // Navigate to the next mission
-    navigate("/2nd-chapter-quiz");
+    navigate("/procced-to-next-quiz");
   };
 
   return (
