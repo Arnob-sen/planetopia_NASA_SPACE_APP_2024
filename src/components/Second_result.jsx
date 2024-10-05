@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Card from './Card'; // Your reusable Card component
 
-const ResultPage = () => {
+const Second_Result = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { isCorrect } = location.state || { isCorrect: false }; // Get the result from the previous page
@@ -16,10 +16,10 @@ const ResultPage = () => {
   return (
     <div className="min-h-screen flex justify-center items-center bg-space-lab2 text-white">
       <Card
-        title={isCorrect ? 'Wowww!Planet Radius:2.21 x Earth (estimate)' : 'OOPSS!Planet Radius:2.21 x Earth (estimate)'}
+        title={isCorrect ? 'nice!Orbital Period:9 years' : 'OOPSS!Orbital Period:9 years'}
         description={
           isCorrect
-            ? `That’s right! Great job. You’ve just unlocked new data about this exoplanet!`
+            ? `Great job! The light curve helps us measure the planet’s orbital period—how long it takes to orbit its star. You’re doing awesome`
             : "That's not correct, but don't worry, you can try again and there are many mission also"
         }
         buttonLabel="Continue"
@@ -29,4 +29,4 @@ const ResultPage = () => {
   );
 };
 
-export default ResultPage;
+export default Second_Result;

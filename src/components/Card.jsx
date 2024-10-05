@@ -1,7 +1,8 @@
 // src/components/Card.jsx
 import React from 'react';
 
-const Card = ({ title, description, buttonLabel, onButtonClick,inputField, inputValue, onInputChange }) => {
+const Card = ({ title, description, buttonLabel, onButtonClick,secondaryButtonLabel,
+    onSecondaryButtonClick,inputField, inputValue, onInputChange }) => {
   return (
     <div className="bg-gray-800 text-white p-8 rounded-lg shadow-lg w-full max-w-md text-center">
       
@@ -28,6 +29,16 @@ const Card = ({ title, description, buttonLabel, onButtonClick,inputField, input
           {buttonLabel}
         </button>
       )}
+      <div>
+      {secondaryButtonLabel && (
+          <button
+            onClick={onSecondaryButtonClick}
+            className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+          >
+            {secondaryButtonLabel}
+          </button>
+        )}
+        </div>
     </div>
   );
 };

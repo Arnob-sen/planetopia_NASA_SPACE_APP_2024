@@ -10,6 +10,9 @@ import NextMissionPage from "./components/NextMissionPage";
 // import { QuizProvider } from "./context/QuizContext";
 import ResultPage from "./components/ResultPage";
 import QuizPage from "./components/QuizPage";
+import NextStepsPage from "./components/NextSteps";
+import Second_Quiz from "./components/Second_Quiz";
+import Second_Result from "./components/Second_result";
 export default function App() {
   return (
     
@@ -23,6 +26,9 @@ export default function App() {
       <Route path="next-mission" element={<NextMissionPage/>}/>
       <Route path="/quiz" element={<QuizPage />} />
       <Route path="/result" element={<ResultPage />} />
+      <Route path="/next-steps" element={<NextStepsPage />} />
+      <Route path="second-quiz" element={<Second_Quiz/>}/>
+      <Route path="second-result" element={<Second_Result/>}/>
       {/* <Route path="quiz" element={<QuizPage/>}/> */}
       {/* <Route path="answare" element={<AnsPage/>}/> */}
     </Routes>
