@@ -7,12 +7,14 @@ import Button from "./Button"; // Import the Button component
 const CardPage = () => {
   const navigate = useNavigate();
 
-  const handleStartQuiz = () => {
+  const handleWelcome = () => {
     // Navigate to the Quiz page
-    navigate("/quiz");
+    navigate("/welcome");
   };
 
   return (
+    <div className="bg-space-lab2 min-h-screen flex flex-col justify-center items-center text-white">
+
     <div className="p-6">
       <h1 className="text-3xl font-bold text-center mb-6">Character Cards</h1>
 
@@ -27,7 +29,13 @@ const CardPage = () => {
           image={Astropencil} // Pass another imported image
         />
       </div>
-      <Button onClick={handleStartQuiz} />
+      <button
+          onClick={handleWelcome}
+          className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+        >
+          Dive into space
+          </button>
+    </div>
     </div>
   );
 };

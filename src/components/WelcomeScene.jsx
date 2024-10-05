@@ -29,13 +29,13 @@ const WelcomeScene = () => {
         inputValue={name}
         onInputChange={(e) => setName(e.target.value)}
       />
-      <div className="absolute bottom-0 right-0 z-50 p-2 h-screen ">
+      {/* <div className="absolute bottom-0 right-0 z-50 p-2 h-screen ">
         <img
           src={avatar}
           alt="Player Avatar"
          
         />
-      </div>
+      </div> */}
     </div>
   );
 };
